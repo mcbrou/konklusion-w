@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScrollspyComponent } from './components/scrollspy/scrollspy.component';
-import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
+import { ScrollspyComponent } from './core/scrollspy/scrollspy.component';
+import { SidenavbarComponent } from './core/sidenavbar/sidenavbar.component';
+import { ElasticSearchService } from './elasticsearch/elasticsearch.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ ElasticSearchService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
